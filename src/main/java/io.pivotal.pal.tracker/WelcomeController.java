@@ -7,23 +7,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class WelcomeController {
     String message;
-    String sentence;
 
-    public WelcomeController(@Value("${welcome.message}") String message,
-                   @Value("${sentence}") String sentence)
+    public WelcomeController(@Value("${message}") String message)
     {
         this.message=message;
-        this.sentence=sentence;
     }
 
-    @GetMapping(value="/")
-    public String hello()
+    @GetMapping(value = "/")
+    public String sayHello()
     {
         return message;
-    }
-    @GetMapping(value="/sentence")
-    public String sentence()
-    {
-        return sentence;
     }
 }
