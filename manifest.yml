@@ -1,0 +1,7 @@
+---
+applications:
+  - name: pal-tracker
+    random-route: true
+    path: build/libs/pal-tracker.jar
+    env:
+      MESSAGE: hello from shijna
